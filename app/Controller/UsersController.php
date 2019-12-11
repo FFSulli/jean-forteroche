@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use \Core\Auth\DBAuth;
-use \Core\HTML\BootstrapForm;
+use \Core\HTML\Form;
 use \App;
 
 /**
