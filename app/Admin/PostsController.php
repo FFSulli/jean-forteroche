@@ -40,7 +40,7 @@ class PostsController extends AppController{
                 return $this->index();
             }
         }   
-        $form = new BootstrapForm($_POST);
+        $form = new Form($_POST);
         $this->render('admin.posts.edit', compact('form'));
     }
 
@@ -57,7 +57,7 @@ class PostsController extends AppController{
             }
         }
         $post = $this->Post->find($_GET['id']);
-        $form = new BootstrapForm($post);
+        $form = new Form($post);
         $this->render('admin.posts.edit', compact('form'));
 
     }
@@ -67,7 +67,7 @@ class PostsController extends AppController{
      */
 
     public function delete(){
-        
+
         if (!empty($_POST)) {
             $result = $this->Post->delete($_POST['id']);
             return $this->index();
