@@ -29,13 +29,13 @@ class PostsController extends AppController{
     }
 
     /**
-     * Fonction permettant d'ajputer un élément
+     * Fonction permettant d'ajouter un élément
      */
 
     public function add(){
         
         if(!empty($_POST)) {
-            $result = $this->Post->create(['titre' => $_POST['titre'], 'contenu' => $_POST['contenu']]);
+            $result = $this->Post->create(['title' => $_POST['title'], 'content' => $_POST['content']]);
             if($result) {
                 return $this->index();
             }
@@ -51,7 +51,7 @@ class PostsController extends AppController{
     public function edit(){
 
         if(!empty($_POST)) {
-            $result = $this->Post->update($_GET['id'], ['titre' => $_POST['titre'], 'contenu' => $_POST['contenu']]);
+            $result = $this->Post->update($_GET['id'], ['title' => $_POST['title'], 'content' => $_POST['content']]);
             if($result) {
                 return $this->index();
             }

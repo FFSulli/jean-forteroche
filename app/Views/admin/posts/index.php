@@ -17,7 +17,7 @@
         <?php foreach($posts as $post): ?>
 
             <td><?= $post->id; ?></td>
-            <td><?= $post->titre; ?></td>
+            <td><?= $post->title; ?></td>
             <td>
                 <a href="?p=admin.posts.edit&id=<?= $post->id; ?>" class="">Editer</a>
                 <form action="?p=admin.posts.delete" method="post" style="display: inline;">

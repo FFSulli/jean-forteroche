@@ -25,7 +25,6 @@ class UsersController extends AppController {
                 header('Location: index.php?p=admin.posts.index');
             } else {
                 $errors = true;
-
             }
         }
 
