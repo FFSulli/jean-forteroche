@@ -1,47 +1,23 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
     <title><?= App::getInstance()->title; ?></title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Parisienne&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navbar</a>
+  <div class="header__container">
+    <nav class="header__menu">
+      <ul class="header__menu-items">
+        <li class="header__menu-logo"><a href="index.php" class="header__menu-link">Jean Forteroche</a></li>
+        <li class="header__menu-item"><a href="" class="header__menu-link">Chapitres</a></li>
+        <li class="header__menu-item"><a href="" class="header__menu-link">Biographie</a></li>
+        <li class="header__menu-item"><a href="" class="header__menu-link">Connexion</a></li>
+      </ul>
     </nav>
-
-<main role="main" class="container">
-
+  </div>
     <div class="starter-template" style="padding-top: 100px;">
       <?= $content; ?>
     </div>
-
-</main><!-- /.container -->
 </html>
