@@ -11,6 +11,8 @@ use \Core\Auth\DBAuth;
 
 class AppController extends \App\Controller\AppController{
 
+    protected $template = 'admin';
+
     /**
      * Constructeur de la classe AppController Admin
      */
