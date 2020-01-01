@@ -1,4 +1,4 @@
-<h1>Interface admin</h1>
+<h1>Tableau de bord</h1>
 
 <h2>Administrer les articles</h2>
 
@@ -19,10 +19,10 @@
             <td><?= $post->id; ?></td>
             <td><?= $post->title; ?></td>
             <td>
-                <a href="?p=admin.posts.edit&id=<?= $post->id; ?>" class="">Editer</a>
+                <a href="?p=admin.posts.edit&id=<?= $post->id; ?>"><button class="admin__delete-edit-btn">Editer</button></a>
                 <form action="?p=admin.posts.delete" method="post" style="display: inline;">
                     <input type="hidden" name="id" value="<?= $post->id; ?>">
-                    <button type="submit" class="">Supprimer</button>
+                    <button type="submit" class="admin__delete-post-btn">Supprimer</button>
                 </form>
             </td>
 
