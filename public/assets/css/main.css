@@ -81,6 +81,27 @@ body {
   text-align: center;
 }
 
+.section__about-blog {
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.section__about-blog-title,
+.section__about-blog-p {
+  padding: 10px 0;
+}
+
+.section__about-blog-title {
+  font-size: 24px;
+  color: #de954c;
+}
+
+.section__about-blog-p {
+  font-size: 16px;
+  color: #262626;
+}
+
 .footer__copyright {
   display: flex;
   justify-content: center;
