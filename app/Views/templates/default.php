@@ -11,7 +11,7 @@
     <nav class="header__menu">
       <ul class="header__menu-items">
         <li class="header__menu-logo"><a href="index.php" class="header__menu-link">Jean Forteroche</a></li>
-        <li class="header__menu-item"><a href="" class="header__menu-link">Chapitres</a></li>
+        <li class="header__menu-item"><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
         <li class="header__menu-item"><a href="" class="header__menu-link">Biographie</a></li>
         <li class="header__menu-item"><a href="" class="header__menu-link">Contact</a></li>
         <li class="header__menu-item"><a href="index.php?p=users.login" class="header__menu-link">Connexion</a></li>
@@ -22,6 +22,10 @@
     <img src="assets/images/header-bg.png" alt="hero-image" class="hero__background">
     <h1 class="hero__title">Un billet simple pour l'Alaska</h1>
   </div>
+  <section class="section__about-blog">
+    <h2 class="section__about-blog-title">Découvrez mon premier roman en ligne</h2>
+    <p class="section__about-blog-p">Un billet simple pour l'Alaska est une nouvelle expérience littéraire. Cherchant à explorer de nouveaux horizons, suivez mon périple au coeur de l'Alaska à travers ce roman en ligne.</p>
+  </section>
     <main class="main__content">
       <?= $content; ?>
   </main>
