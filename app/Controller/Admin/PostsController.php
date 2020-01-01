@@ -40,8 +40,7 @@ class PostsController extends AppController{
                 return $this->index();
             }
         }   
-        $form = new Form($_POST);
-        $this->render('admin.posts.edit', compact('form'));
+        $this->render('admin.posts.edit');
     }
 
     /**
@@ -57,8 +56,7 @@ class PostsController extends AppController{
             }
         }
         $post = $this->Post->find($_GET['id']);
-        $form = new Form($post);
-        $this->render('admin.posts.edit', compact('form'));
+        $this->render('admin.posts.edit');
 
     }
 
