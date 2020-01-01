@@ -33,4 +33,21 @@ class UsersController extends AppController {
 
     }
 
+    public function register() {
+
+        $errors = false;
+        if(!empty($_POST)) {
+            $auth = new DBAuth(App::getInstance()->getDb());
+            if($auth->logged()) {
+                header('Location: index.php');
+            } else {
+                $errors = true;
+            }
+        }
+
+        $form = new Form($_POST);
+        $this->render('users.register', compact('form', 'errors'));
+
+    }
+
 }

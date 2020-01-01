@@ -53,7 +53,6 @@ class DBAuth {
                 return true;
             }
         } 
-
         return false;
     }
 

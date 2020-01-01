@@ -1,5 +1,5 @@
-<h1><?= $article->titre; ?></h1>
+<h1><?= $article->title; ?></h1>
 
-<p> <?= $article->contenu; ?></p>
+<p> <?= $article->content; ?></p>
 
 <p><a href="index.php?p=home">Home</a></p>
