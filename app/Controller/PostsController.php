@@ -22,17 +22,6 @@ class PostsController extends AppController {
     }
 
     /**
-     * Fonction permettant de retourner à l'index
-     */
-
-    public function index() {
-
-        $posts = $this->Post->last();
-        $this->render('posts.index', compact('posts'));
-
-    }
-
-    /**
      * Fonction permettant d'afficher un article
      */
     
@@ -40,6 +29,13 @@ class PostsController extends AppController {
 
         $article = $this->Post->find($_GET['id']);
         $this->render('posts.show', compact('article'));
+
+    }
+
+    public function chapters() {
+
+        $posts = $this->Post->last();
+        $this->render('posts.chapters', compact('posts'));
 
     }
 }
