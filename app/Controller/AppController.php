@@ -35,4 +35,12 @@ class AppController extends Controller {
 
     }
 
+    /**
+     * Fonction permettant d'afficher l'index
+     */
+
+    public function index() {
+        $this->render('index');
+    }
+
 }
