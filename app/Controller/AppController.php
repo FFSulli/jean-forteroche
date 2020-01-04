@@ -20,6 +20,7 @@ class AppController extends Controller {
     public function __construct() {
 
         $this->viewPath = ROOT . '/app/Views/';
+        $this->loadModel('Post');
 
     }
 
@@ -40,7 +41,8 @@ class AppController extends Controller {
      */
 
     public function index() {
-        $this->render('index');
+        $lastThreePosts = $this->Post->lastThree();
+        $this->render('index', compact('lastThreePosts'));
     }
 
 }
