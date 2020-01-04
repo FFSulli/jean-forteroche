@@ -35,7 +35,7 @@ class PostsController extends AppController{
     public function add(){
         
         if(!empty($_POST)) {
-            $result = $this->Post->create(['title' => $_POST['title'], 'content' => $_POST['content']]);
+            $result = $this->Post->create(['title' => $_POST['title'], 'content' => $_POST['content'], 'excerpt' => $_POST['excerpt']]);
             if($result) {
                 return $this->index();
             }
@@ -50,7 +50,7 @@ class PostsController extends AppController{
     public function edit(){
 
         if(!empty($_POST)) {
-            $result = $this->Post->update($_GET['id'], ['title' => $_POST['title'], 'content' => $_POST['content']]);
+            $result = $this->Post->update($_GET['id'], ['title' => $_POST['title'], 'content' => $_POST['content'], 'excerpt' => $_POST['excerpt']]);
             if($result) {
                 return $this->index();
             }
