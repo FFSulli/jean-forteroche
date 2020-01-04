@@ -14,7 +14,6 @@
         <li class="header__menu-item"><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
         <li class="header__menu-item"><a href="" class="header__menu-link">Biographie</a></li>
         <li class="header__menu-item"><a href="" class="header__menu-link">Contact</a></li>
-        <li class="header__menu-item"><a href="index.php?p=users.login" class="header__menu-link">Connexion</a></li>
       </ul>
     </nav>
   </header>
@@ -35,7 +34,7 @@
           <li class="footer__menu-item"><a href="" class="footer__menu-link">Chapitres</a></li>
           <li class="footer__menu-item"><a href="" class="footer__menu-link">Biographie</a></li>
           <li class="footer__menu-item"><a href="" class="footer__menu-link">Contact</a></li>
-          <li class="footer__menu-item"><a href="" class="footer__menu-link">Connexion</a></li>
+          <li class="footer__menu-item"><a href="" class="footer__menu-link">Administration</a></li>
         </ul>
         <p class="footer__copyright">&copy; <?= date("Y") ?> - Jean Forteroche</p>
   </footer>
