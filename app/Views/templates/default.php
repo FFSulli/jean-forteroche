@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title><?= App::getInstance()->title; ?></title>
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700|Parisienne&display=swap" rel="stylesheet">
   </head>
   <body>
   <header class="header__container">
@@ -12,7 +12,7 @@
       <ul class="header__menu-items">
         <li class="header__menu-logo"><a href="index.php" class="header__menu-link">Jean Forteroche</a></li>
         <li class="header__menu-item"><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
-        <li class="header__menu-item"><a href="" class="header__menu-link">Biographie</a></li>
+        <li class="header__menu-item"><a href="index.php?p=biography.show" class="header__menu-link">Biographie</a></li>
         <li class="header__menu-item"><a href="" class="header__menu-link">Contact</a></li>
       </ul>
     </nav>
@@ -30,11 +30,10 @@
   </main>
   <footer class="footer__container">
     <ul class="footer__menu-items">
-          <li class="footer__menu-logo"><a href="index.php" class="footer__menu-link">Jean Forteroche</a></li>
-          <li class="footer__menu-item"><a href="" class="footer__menu-link">Chapitres</a></li>
-          <li class="footer__menu-item"><a href="" class="footer__menu-link">Biographie</a></li>
+          <li class="footer__menu-item"><a href="index.php?p=posts.chapters" class="footer__menu-link">Chapitres</a></li>
+          <li class="footer__menu-item"><a href="index.php?p=biography.show" class="footer__menu-link">Biographie</a></li>
           <li class="footer__menu-item"><a href="" class="footer__menu-link">Contact</a></li>
-          <li class="footer__menu-item"><a href="" class="footer__menu-link">Administration</a></li>
+          <li class="footer__menu-item"><a href="index.php?p=users.login" class="footer__menu-link">Administration</a></li>
         </ul>
         <p class="footer__copyright">&copy; <?= date("Y") ?> - Jean Forteroche</p>
   </footer>
