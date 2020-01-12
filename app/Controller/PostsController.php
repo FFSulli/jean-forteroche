@@ -18,6 +18,8 @@ class PostsController extends AppController {
 
         parent::__construct();
         $this->loadModel('Post');
+        $this->loadModel('Comment');
+
 
     }
 
@@ -28,7 +30,16 @@ class PostsController extends AppController {
     public function show() {
 
         $article = $this->Post->find($_GET['id']);
-        $this->render('posts.show', compact('article'));
+        $comments = $this->Post->displayComments($_GET['id']);
+
+        if(!empty($_POST)) {
+            $result = $this->Comment->addComment();
+            if($result) {
+                header('Location: '.$_SERVER['REQUEST_URI']);
+            }
+        }   
+
+        $this->render('posts.show', compact('article', 'comments'));
 
     }
 
@@ -38,4 +49,5 @@ class PostsController extends AppController {
         $this->render('posts.chapters', compact('posts'));
 
     }
+
 }
