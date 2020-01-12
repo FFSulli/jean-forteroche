@@ -45,4 +45,8 @@ class AppController extends Controller {
         $this->render('index', compact('lastThreePosts'));
     }
 
+    public function biography() {
+        $this->render('posts.biography');
+    }
+
 }
