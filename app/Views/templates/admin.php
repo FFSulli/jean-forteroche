@@ -11,6 +11,7 @@
   <script>
     tinymce.init({
       selector: 'textarea',
+      resize: false,
       plugins: '',
       toolbar: '',
       toolbar_drawer: 'floating',

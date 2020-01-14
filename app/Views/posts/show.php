@@ -1,22 +1,25 @@
-<h1><?= $article->title; ?></h1>
-
-<p> <?= $article->content; ?></p>
-
-<p><a href="index.php">Home</a></p>
-
-<form method="post" class="form__post-edit">
-    <input type="text" name="comment_author" placeholder="Nom d'utilisateur">
-    <input type="textarea" name="comment" placeholder="Commentez cet article">
-    <button class="btn btn-primary">Envoyer</button>
-</form>
-<div>
+<section class="section__post-container">
+    <h2 class="section__post-title"><?= $article->title; ?></h2>
+    <p class="section__post-content"> <?= $article->content; ?></p>
+    <p class="section__post-back-home"><a href="index.php" class="section__post-link">Retour à l'accueil</a></p>
+</section>
+<section class="section__comments-container">
+    <h3 class="section__comments-title">Ajouter un commentaire</h3>
+    <form method="post" class="form__comments-add">
+        <input type="text" name="comment_author" placeholder="Nom d'utilisateur" class="input__comment-author">
+        <textarea name="comment" placeholder="Commentez cet article" class="textarea__comment-content"></textarea>
+        <input type="submit" name="add_comment" class="form__cta-button" value="Envoyer" />
+    </form>
+    <div class="section__comments-display"> 
+        <h3 class="section__comments-title">Lire les commentaires</h3>
     <?php foreach($comments as $comment): ?>
-                <div class="div__chapter">
-                    <p><?= $comment->id ?></p>
-                    <h3 class="div__chapter-comment"><?= $comment->comment_author ?></h3>
-                    <p class="div__chapter-date">Paru le <?= $comment->comment_date ?></p>
-                    <p class="div__chapter-excerpt"><?= $comment->comment ?></p>
+            <?php if($comment) { ?>
+                    <form method="post" class="form__comments-display">
+                        <p class="form__comment-author"><?= $comment->comment_author ?></p>
+                        <p class="form__comment-date"><?= $comment->comment_date ?></p>
+                        <p class="form__comment-p"><?= $comment->comment ?></p>
+                        <input type="submit" class="form__report-button" name="report_comment" value="Signaler le commentaire" />
+                    </form>
                 </div>
-    <?php endforeach; ?>
-    <?php var_dump($comment); ?>
-</div>
+            <?php } endforeach; ?>
+</section>

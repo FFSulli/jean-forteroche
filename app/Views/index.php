@@ -17,7 +17,7 @@
     <h2 class="div__home-last-chapters-title">Derniers chapitres</h2>
     <div class="div__home-last-chapters">
         <?php foreach($lastThreePosts as $post): ?>
-            <div class="div__chapter">
+            <div class="div__last-chapters">
                 <h2 class="div__chapter-title"><a href="<?= $post->url ?>" class="div__chapter-link"><?= $post->title; ?></a></h2>
                 <p class="div__chapter-date">Paru le <?= $post->date ?></p>
                 <p class="div__chapter-excerpt"><?= $post->excerpt ?></p>
