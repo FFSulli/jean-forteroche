@@ -15,8 +15,6 @@ body {
 
 .footer__container {
   width: 100%;
-  height: 175px;
-  margin: 30px auto 0;
   background-color: #262626;
 }
 
@@ -33,21 +31,30 @@ body {
 .header__menu-logo {
   flex: 1;
   font-family: "Parisienne", cursive !important;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .header__menu-item {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .header__menu-link,
-.footer__menu-link {
+.footer__menu-link,
+.section__post-link {
   text-decoration: none;
-  transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s color;
+}
+
+.header__menu-link,
+.section__post-link {
+  color: #262626;
+}
+
+.section__post-back-home {
+  padding: 20px 0;
 }
 
 .header__menu-link {
-  color: #262626;
   padding: 0 30px;
 }
 
@@ -58,7 +65,8 @@ body {
   color: #fff;
 }
 
-.header__menu-link:hover {
+.header__menu-link:hover,
+.section__post-link:hover {
   color: #de954c;
 }
 
@@ -71,8 +79,8 @@ body {
 }
 
 .hero__title {
-  font-family: "Parisienne", cursive;
-  font-size: 64px;
+  width: 80%;
+  font-size: 2em;
   color: #fff;
   position: absolute;
   top: 50%;
@@ -92,14 +100,230 @@ body {
   padding: 10px 0;
 }
 
-.section__about-blog-title {
+.section__about-blog-title,
+.section__admin-title {
   font-size: 24px;
   color: #de954c;
 }
 
-.section__about-blog-p {
+.section__about-blog-p,
+.div__chapter-excerpt {
   font-size: 16px;
+  font-weight: 300;
   color: #262626;
+}
+
+.section__synopsis-container {
+  display: flex;
+  align-items: center;
+}
+
+.section__biography-container,
+.section__post-container,
+.section__comments-container,
+.section__admin-container,
+.section__admin-edit-container,
+.section__contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.div__synopsis-text,
+.div__synopsis-gallery {
+  width: 35%;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.div__biography-text,
+.div__biography-gallery {
+  margin: 0 auto;
+}
+
+.div__biography-gallery .div__synopsis-title,
+.div__home-last-chapters-title,
+.div__biography-title,
+.section__post-title,
+.section__comments-title,
+.section__admin-subtitle,
+.section__contact-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.div__synopsis-title,
+.div__biography-title,
+.section__post-, 
+.section__contact-title {
+  padding: 10px 0;
+}
+
+.div__home-last-chapters-title {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.div__synopsis-p,
+.div__biography-p,
+.section__post-p, p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #262626;
+  padding: 10px 0;
+}
+
+.div__cta {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.div__cta-button,
+.form__cta-button {
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    rgba(196, 149, 23, 0.68) 0%,
+    rgba(175, 95, 95, 0.86) 51%,
+    rgba(196, 149, 23, 0.68) 100%
+  );
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: none;
+  transition: ease-in-out 0.3s opacity;
+}
+
+.div__cta-button:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.div__synopsis-image,
+.div__biography-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.section__home-last-chapters-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  height: auto;
+  margin: 50px auto 0 auto;
+  padding-bottom: 40px;
+}
+
+.div__home-last-chapters {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.div__last-chapters {
+  display: block;
+  margin: 30px auto;
+}
+
+.div__chapter {
+  display: block;
+  width: 30%;
+  margin: 30px;
+}
+
+.div__chapter-link,
+.div__chapter-date,
+.div__chapter-excerpt {
+  padding: 5px 0;
+}
+
+.div__chapter-link {
+  font-size: 20px;
+  color: #de954c;
+  text-decoration: none;
+  transition: ease-in-out 0.3s color;
+}
+
+.div__chapter-link:hover {
+  color: rgba(222, 149, 76, 0.75);
+}
+
+.link__home {
+  font-size: 14px;
+  color: #de954c;
+  text-decoration: none;
+  transition: ease-in-out 0.3s color;
+}
+
+.link__home:hover {
+  color: rgba(222, 149, 76, 0.75);
+}
+
+.div__chapter-date,
+.form__comment-date {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.div__chapter-excerpt {
+  text-align: justify;
+}
+
+.section__chapters-container {
+  background-color: #fafafa;
+  display: flex;
+  margin: 50px auto 0 auto;
+  padding-bottom: 40px;
+}
+
+.div__chapters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.div__warning {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  background-color: rgb(202, 104, 104);
+  border-radius: 5px;
+  border: 1px solid rgb(235, 104, 104);
+  margin: 20px auto;
+}
+
+.div__warning-text {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.form__login-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form__login {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+input,
+.textarea__comment-content,
+.textarea__contact-message, .textarea__admin-post-excerpt {
+  border-radius: 5px;
+  border: 2px solid #de954c48;
+  padding: 10px 20px;
+  margin: 10px 0;
 }
 
 .footer__copyright {
@@ -107,4 +331,220 @@ body {
   justify-content: center;
   margin: 30px 0;
   color: #fff;
+}
+
+.section__post-container {
+  width: 80%;
+}
+
+.form__comments-add, .form__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__contact {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.input__comment-author {
+  width: 200px;
+}
+
+.form__report-button {
+  background-color: #de954c48;
+  cursor: pointer;
+  transition: ease-in 0.3s all;
+}
+
+.form__report-button:hover {
+  background-color: #de954c;
+  color: #fff;
+}
+
+.textarea__comment-content {
+  height: 100px;
+  resize: none;
+  width: 400px;
+}
+
+.input__contact-name, .textarea__contact-message {
+  width: 100%;
+}
+
+.textarea__contact-message {
+  height: 100px;
+  resize: none;
+}
+
+.textarea__admin-post-excerpt {
+  height: 100px;
+  width: 100%;
+  resize: none;
+}
+
+.form__cta-button {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.section__comments-add,
+.section__comments-display {
+  margin: 40px 0;
+}
+
+.section__comments-title {
+  padding: 20px 0;
+}
+
+.form__comment-author {
+  font-weight: 600;
+}
+
+.form__comment-p {
+  padding: 20px 0;
+}
+
+.section__admin-title,
+.section__admin-subtitle {
+  padding: 10px 0;
+}
+
+.section__admin-link {
+  padding: 10px 0;
+  color: #262626;
+  transition: ease-in-out 0.3s color;
+}
+
+.section__admin-link:hover {
+  color: #de954c;
+}
+
+.section__admin-posts-header,
+.section__admin-post {
+  display: flex;
+}
+
+.section__admin-posts-header {
+  background-color: #262626;
+  color: #fff;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.section__admin-post {
+  padding: 8px 16px;
+}
+
+.span__admin-posts-title,
+.span__admin-post-title {
+  flex: 1;
+}
+
+.section__admin-post-edit-button,
+.section__admin-post-delete-button,
+.section__admin-post-save-button,
+.section__admin-post-preview-button,
+.section__admin-post-publish-button,
+.section__admin-post-unpublish-button,
+.section__admin-post-allow-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.section__admin-post-edit-button,
+.section__admin-post-save-button {
+  background-color: rgb(37, 121, 231);
+}
+
+.section__admin-post-preview-button {
+  background-color: #e9b91d;
+}
+
+.section__admin-post-publish-button,
+.section__admin-post-allow-button {
+  background-color: #36ce7a;
+}
+
+.section__admin-post-unpublish-button {
+  background-color: #3c413e;
+}
+
+.section__admin-post-delete-button {
+  background-color: rgb(207, 68, 68);
+}
+
+.div__admin-post-excerpt,
+.div__admin-post-content {
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .hero__background {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .section__synopsis-container {
+    flex-direction: column-reverse;
+  }
+
+  .div__synopsis-text, .div__synopsis-gallery {
+    width: 70%;
+  }
+
+  .div__home-last-chapters {
+    flex-direction: column;
+  }
+
+  .div__chapters-list {
+    flex-direction: column;
+  }
+
+  .div__chapter {
+    width: initial;
+    margin: 30px auto;
+  }
+
+  .header__menu-items {
+    flex-wrap: wrap;
+  }
+
+  .header__menu-logo {
+    flex: initial;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .header__menu-item {
+    flex: 1;
+  }
+
+  .header__menu-link {
+    padding: 0;
+  }
+
+  .input__contact-name, .textarea__contact-message {
+    width: 100%;
+  }
+
+  .footer__menu-item:last-child {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 580px) {
+
+  .footer__menu-items {
+    flex-direction: column;
+  }
+
 }
