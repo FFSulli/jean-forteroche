@@ -548,4 +548,8 @@ input,
     flex-direction: column;
   }
 
+  .form__comments-add, .form__contact {
+    width: 100%;
+  }
+
 }
