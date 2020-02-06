@@ -13,7 +13,11 @@ class PostTable extends Table {
     protected $table = 'posts';
 
     public function first() {
-        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, posts.date FROM posts ORDER BY posts.id ASC');
+        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, DATE_FORMAT(posts.date, "%d/%m/%Y à %Hh%i") AS date FROM posts ORDER BY posts.id ASC');
+    }
+
+    public function saved() {
+        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, DATE_FORMAT(posts.date, "%d/%m/%Y à %Hh%i") AS date FROM posts WHERE posts.post_status = "saved" ORDER BY posts.id DESC');
     }
     
     /**
@@ -22,12 +26,12 @@ class PostTable extends Table {
      * @return array
      */
 
-    public function last() {
-        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, posts.date FROM posts ORDER BY posts.id DESC');
+    public function published() {
+        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, DATE_FORMAT(posts.date, "%d/%m/%Y à %Hh%i") AS date FROM posts WHERE posts.post_status = "published" ORDER BY posts.id DESC');
     }
 
-    public function lastThree() {
-        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, posts.date FROM posts ORDER BY posts.id DESC LIMIT 3');
+    public function lastThreePublished() {
+        return $this->query('SELECT posts.id, posts.title, posts.content, posts.excerpt, DATE_FORMAT(posts.date, "%d/%m/%Y à %Hh%i") AS date FROM posts WHERE posts.post_status = "published" ORDER BY posts.id DESC LIMIT 3');
     }
 
 }
