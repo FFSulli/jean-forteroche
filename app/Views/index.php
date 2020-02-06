@@ -1,3 +1,7 @@
+<section class="section__about-blog">
+    <h2 class="section__about-blog-title">Découvrez mon premier roman en ligne</h2>
+    <p class="section__about-blog-p">Un billet simple pour l'Alaska est une nouvelle expérience littéraire. Cherchant à explorer de nouveaux horizons, suivez mon périple au coeur de l'Alaska à travers ce roman en ligne.</p>
+</section>
 <section class="section__synopsis-container">
     <div class="div__synopsis-text">
         <h2 class="div__synopsis-title">Synopsis</h2>

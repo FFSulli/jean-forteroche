@@ -1,4 +1,7 @@
-<a href="index.php" class="link__home">Retour à l'accueil</a>
+<div class="section__post-container">
+    <a href="index.php" class="link__home">Retour à l'accueil</a>
+    <p class="section__post-title">Lire les chapitres</p>
+</div>
 <section class="section__chapters-container">
     <div class="div__chapters-list">
         <?php foreach($posts as $post): ?>
