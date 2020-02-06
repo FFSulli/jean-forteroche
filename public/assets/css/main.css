@@ -220,18 +220,19 @@ body {
 
 .div__home-last-chapters {
   display: flex;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .div__last-chapters {
   display: block;
+  width: 30%;
   margin: 30px auto;
 }
 
 .div__chapter {
   display: block;
-  width: 30%;
+  width: 100%;
   margin: 30px;
 }
 
@@ -283,6 +284,7 @@ body {
 
 .div__chapters-list {
   display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   justify-content: center;
   width: 70%;
@@ -340,15 +342,8 @@ input,
 .form__comments-add, .form__contact {
   display: flex;
   flex-direction: column;
-}
-
-.form__contact {
-  width: 70%;
+  width: 40%;
   margin: 0 auto;
-}
-
-.input__comment-author {
-  width: 200px;
 }
 
 .form__report-button {
@@ -362,17 +357,11 @@ input,
   color: #fff;
 }
 
-.textarea__comment-content {
-  height: 100px;
-  resize: none;
-  width: 400px;
-}
-
-.input__contact-name, .textarea__contact-message {
+.input__contact-name, .textarea__contact-message, .textarea__comment-content, .input__comment-author {
   width: 100%;
 }
 
-.textarea__contact-message {
+.textarea__contact-message, .textarea__comment-content {
   height: 100px;
   resize: none;
 }
@@ -395,6 +384,10 @@ input,
 
 .section__comments-title {
   padding: 20px 0;
+}
+
+.input__comment-author {
+  width: 100%;
 }
 
 .form__comment-author {
@@ -485,6 +478,18 @@ input,
   margin: 20px 0;
 }
 
+@media only screen and (max-width: 1024px) {
+
+  .div__home-last-chapters {
+    flex-direction: column;
+  }
+
+  .div__last-chapters {
+    width: 100%;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
 
   .hero__background {
@@ -498,14 +503,6 @@ input,
 
   .div__synopsis-text, .div__synopsis-gallery {
     width: 70%;
-  }
-
-  .div__home-last-chapters {
-    flex-direction: column;
-  }
-
-  .div__chapters-list {
-    flex-direction: column;
   }
 
   .div__chapter {
