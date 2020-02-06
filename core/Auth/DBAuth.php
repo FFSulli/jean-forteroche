@@ -34,8 +34,7 @@ class DBAuth {
         }
         return false;
     }
-
-
+    
     /**
      * Fonction permettant de s'identifier
      *
