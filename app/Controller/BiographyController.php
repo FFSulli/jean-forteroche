@@ -11,7 +11,7 @@ use Core\Controller\Controller;
 class BiographyController extends AppController {
 
     /**
-     * Constructeur de la classe PostsController
+     * Constructeur de la classe BiographyController
      */
 
     public function __construct() {

@@ -28,6 +28,7 @@ class PostsController extends AppController {
     
     public function show() {
 
+
         $article = $this->Post->find($_GET['id']);
         $comments = $this->Comment->displayComments($_GET['id']);
 
@@ -39,7 +40,7 @@ class PostsController extends AppController {
         }  
 
         if(isset($_POST['report_comment'])) {
-            $reported = $this->Comment->reportComment($_GET['comment_id']);
+            $reported = $this->Comment->reportComment($_POST['comment_id']);
             if($reported) {
                 header('Location: '.$_SERVER['REQUEST_URI']);
             }
@@ -51,7 +52,7 @@ class PostsController extends AppController {
 
     public function chapters() {
 
-        $posts = $this->Post->last();
+        $posts = $this->Post->published();
         $this->render('posts.chapters', compact('posts'));
 
     }

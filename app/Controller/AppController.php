@@ -41,7 +41,7 @@ class AppController extends Controller {
      */
 
     public function index() {
-        $lastThreePosts = $this->Post->lastThree();
+        $lastThreePosts = $this->Post->lastThreePublished();
         $this->render('index', compact('lastThreePosts'));
     }
 
