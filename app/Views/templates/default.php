@@ -6,18 +6,20 @@
     <title><?= App::getInstance()->title; ?></title>
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700|Parisienne&display=swap" rel="stylesheet">
+    <script src="assets/js/app.js" defer></script>
   </head>
   <body>
-  <header class="header__container">
-    <nav class="header__menu">
-      <ul class="header__menu-items">
-        <li class="header__menu-logo"><a href="index.php" class="header__menu-link">Jean Forteroche</a></li>
-        <li class="header__menu-item"><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
-        <li class="header__menu-item"><a href="index.php?p=biography.show" class="header__menu-link">Biographie</a></li>
-        <li class="header__menu-item"><a href="index.php?p=contact.show" class="header__menu-link">Contact</a></li>
+    <header class="nav__container">
+      <a href="index.php" class="nav__logo header__menu-link">Jean Forteroche</a>
+      <ul class="nav__menu">
+        <li><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
+        <li><a href="index.php?p=biography.show" class="header__menu-link">Biographie</a></li>
+        <li><a href="index.php?p=contact.show" class="header__menu-link">Contact</a></li>
       </ul>
-    </nav>
-  </header>
+      <button class="nav__burger">
+        <span></span>
+      </button>
+    </header>
   <div class="hero__container">
     <img src="assets/images/header-bg.png" alt="hero-image" class="hero__background">
     <h1 class="hero__title">Un billet simple pour l'Alaska</h1>
