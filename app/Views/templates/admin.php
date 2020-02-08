@@ -10,16 +10,17 @@
     <script src="assets/js/TinyMCE/config.js"></script>
   </head>
   <body>
-  <header class="header__container">
-    <nav class="header__menu">
-      <ul class="header__menu-items">
-        <li class="header__menu-logo"><a href="index.php" class="header__menu-link">Jean Forteroche</a></li>
-        <li class="header__menu-item"><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
-        <li class="header__menu-item"><a href="index.php?p=biography.show" class="header__menu-link">Biographie</a></li>
-        <li class="header__menu-item"><a href="index.php?p=contact.show" class="header__menu-link">Contact</a></li>
+  <header class="nav__container">
+      <a href="index.php" class="nav__logo header__menu-link">Jean Forteroche</a>
+      <ul class="nav__menu">
+        <li><a href="index.php?p=posts.chapters" class="header__menu-link">Chapitres</a></li>
+        <li><a href="index.php?p=biography.show" class="header__menu-link">Biographie</a></li>
+        <li><a href="index.php?p=contact.show" class="header__menu-link">Contact</a></li>
       </ul>
-    </nav>
-  </header>
+      <button class="nav__burger">
+        <span></span>
+      </button>
+    </header>
     <main class="main__content">
       <?= $content; ?>
   </main>
