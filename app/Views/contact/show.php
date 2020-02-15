@@ -1,6 +1,6 @@
 <section class="section__contact-container">
     <h2 class="section__contact-title">Formulaire de contact</h2>
-    <form action="" class="form__contact">
+    <form action="#" class="form__contact">
         <div class="input__field">
             <input type="text" name="name" class="input__contact-name" placeholder="Votre nom & prénom" autocomplete="off">
         </div>

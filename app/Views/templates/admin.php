@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= App::getInstance()->title; ?></title>
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/496iic3ku9g8yys8xau5jpck0qw8k0szb5ivywncewafblx6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="assets/js/TinyMCE/config.js"></script>
   </head>

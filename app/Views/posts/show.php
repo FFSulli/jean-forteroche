@@ -21,6 +21,6 @@
                         <input type="submit" class="form__report-button" name="report_comment" value="Signaler le commentaire" />
                         <input type="hidden" name="comment_id" value="<?= $comment->comment_id ?>" />
                     </form>
-                </div>
             <?php } endforeach; ?>
+    </div>
 </section>

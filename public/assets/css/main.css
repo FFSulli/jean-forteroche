@@ -28,6 +28,11 @@ body {
   margin-bottom: 32px;
 }
 
+.nav__logo {
+  font-family: 'Parisienne', cursive;
+  font-size: 24px;
+}
+
 .nav__menu {
   margin-left: auto;
   display: flex;

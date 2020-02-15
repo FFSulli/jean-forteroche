@@ -10,7 +10,7 @@
         But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Also he got a race car.
         Is any of this getting through to you?</p>
         <div class="div__cta">
-            <a href="index.php?p=posts.chapters"><button class="div__cta-button">Commencer le roman</button></a>
+            <a href="index.php?p=posts.chapters" class="div__cta-button">Commencer le roman</a>
         </div>
     </div>
     <div class="div__synopsis-gallery">
@@ -29,7 +29,7 @@
         <?php endforeach; ?>
     </div>
     <div class="div__cta">
-        <a href="index.php?p=posts.chapters"><button class="div__cta-button">Voir tous les chapitres</button></a>
+        <a href="index.php?p=posts.chapters" class="div__cta-button">Voir tous les chapitres</a>
     </div>
 </section>
 
