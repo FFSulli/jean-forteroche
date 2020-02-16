@@ -536,6 +536,14 @@ input,
   background-color: rgb(207, 68, 68);
 }
 
+.span__admin-reports-title {
+  margin-right: 22%;
+}
+
+.span__admin-reports-count {
+  margin-right: 15%;
+}
+
 .div__admin-post-excerpt,
 .div__admin-post-content {
   margin: 20px 0;

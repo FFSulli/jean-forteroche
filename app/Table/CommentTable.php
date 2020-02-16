@@ -25,7 +25,7 @@ class CommentTable extends Table {
     }
 
     public function reportedComments() {
-        return $this->query("SELECT comment_id, comment, report_status  FROM comments WHERE report_status = 'reported' ORDER BY comments.comment_id ASC");
+        return $this->query("SELECT comment_id, comment, report_status, report_count  FROM comments WHERE report_status = 'reported' ORDER BY comments.report_count DESC");
     }
 
     public function allowComment($comment_id) {
@@ -39,6 +39,10 @@ class CommentTable extends Table {
 
     public function displayComments($post_id) {
         return $this->query("SELECT comment_id, comment, comment_author, DATE_FORMAT(comment_date, '%d/%m/%Y %Hh%i') AS comment_date, report_status FROM posts INNER JOIN comments ON posts.id = comments.post_id WHERE post_id = ? ORDER BY comments.comment_date ASC", [$post_id]);
+    }
+
+    public function incrementReportCount ($comment_id) {
+        return $this->query("UPDATE comments SET report_count = report_count + 1 WHERE comment_id = '$comment_id'");
     }
 
 }

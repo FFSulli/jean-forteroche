@@ -41,10 +41,12 @@ class PostsController extends AppController {
 
         if(isset($_POST['report_comment'])) {
             $reported = $this->Comment->reportComment($_POST['comment_id']);
+            $report_count = $this->Comment->incrementReportCount($_POST['comment_id']);
             if($reported) {
                 header('Location: '.$_SERVER['REQUEST_URI']);
             }
         }
+
 
         $this->render('posts.show', compact('article', 'comments'));
 

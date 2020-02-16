@@ -45,11 +45,13 @@
     <h3 class="section__admin-subtitle">Commentaires signalés</h3>
     <div class="section__admin-posts-header">
         <span class="span__admin-posts-title">Commentaire</span>
+        <span class="span__admin-reports-title">Signalements</span>
         <span class="span__admin-posts-actions">Actions</span>
     </div>
     <?php foreach($reported_comments as $reported_comment): ?>
     <div class="section__admin-post">
         <span class ="span__admin-post-title"><?= $reported_comment->comment; ?></span>
+        <span class ="span__admin-reports-count"><?= $reported_comment->report_count; ?></span>
         <form action="?p=admin.posts.allow_comment" method="post" style="display: inline;">
                 <input type="hidden" name="allow_comment" value="<?= $reported_comment->comment_id; ?>">
                 <button type="submit" class="section__admin-post-allow-button">Autoriser</button>
